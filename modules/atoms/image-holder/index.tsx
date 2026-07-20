@@ -8,8 +8,8 @@ type ImageHolderProps = {
 
 export default function ImageHolder({alt, link, background} : ImageHolderProps){
     return(
-        <main className={`rounded-lg ${background}`}>
-            <Image alt={alt} src={link} width={120} height={120} />
+        <main className={`rounded-3xl ${background}`}>
+            <Image alt={alt} src={link} width={260} height={260} />
         </main>
     );
 }
