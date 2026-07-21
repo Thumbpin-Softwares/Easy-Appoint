@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Varela_Round, Geist_Mono } from "next/font/google";
+import SmoothScroll from "@/modules/atoms/smooth-scroll";
 import "./globals.css";
 
 const varelaRound = Varela_Round({
@@ -29,7 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${varelaRound.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }
