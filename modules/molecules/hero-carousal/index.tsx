@@ -45,7 +45,7 @@ export default function HeroCarousal() {
           x: ["0%", "-50%"],
         }}
         transition={{
-          duration: 20,
+          duration: 40,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -53,7 +53,7 @@ export default function HeroCarousal() {
         {duplicatedImages.map((item, index) => (
           <ImageHolder
             key={index}
-            background="bg-linear-to-r from-blue-100 via-blue-200 to-blue-300"
+            background="bg-linear-to-t from-blue-50 via-blue-200 to-blue-100"
             alt={item.alt}
             link={item.link}
           />

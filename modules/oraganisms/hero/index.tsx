@@ -1,5 +1,6 @@
 import Button from "@/modules/atoms/button";
 import HeroCarousal from "@/modules/molecules/hero-carousal";
+import Brands from "@/modules/molecules/brands";
 
 export default function Hero(){
     return(
@@ -14,6 +15,7 @@ export default function Hero(){
             </div>
 
             <HeroCarousal />
+            <Brands />
         </main>
     );
 }
