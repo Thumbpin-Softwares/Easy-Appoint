@@ -29,9 +29,9 @@ export default function Navbar() {
   return (
     <main className="bg-white border-b border-neutral-300 flex items-center justify-between px-18 py-1">
       <Logo />
-      <div className="flex gap-4">
+      <div className="flex gap-8">
         {navlinks.map((item, index) => (
-          <Link className="text-sm tracking-tight" key={index} href={item.link}>
+          <Link className="tracking-tight" key={index} href={item.link}>
             {item.title}
           </Link>
         ))}

@@ -1,5 +1,6 @@
 import Navbar from "@/modules/oraganisms/navbar";
 import Hero from "@/modules/oraganisms/hero";
+import About from "@/modules/oraganisms/about";
 
 export default function home(){
   return(
@@ -9,6 +10,9 @@ export default function home(){
       </div>
       <div>
         <Hero />
+      </div>
+      <div className="bg-white">
+        <About />
       </div>
     </main>
   );
