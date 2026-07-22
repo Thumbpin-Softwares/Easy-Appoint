@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 border-b border-neutral-200 bg-white/80 backdrop-blur-xl">
+      <nav className="sticky top-0 z-50 border-b border-neutral-200 bg-white">
         <div className="mx-auto flex h-18 items-center justify-between px-6 lg:px-18">
           <Logo />
 

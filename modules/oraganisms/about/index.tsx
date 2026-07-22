@@ -53,12 +53,12 @@ export default function About() {
       <main className="flex lg:hidden flex-col px-6 py-10 gap-10">
         {/* Heading */}
         <div className="flex flex-col gap-4">
-          <h1 className="text-3xl sm:text-left text-center tracking-tight">
+          <h1 className="text-2xl sm:text-left text-center tracking-tight">
             No more searching. We match IT, AI, Marketing and E-Learning talent
             to your projects full-time, remote, or freelance.
           </h1>
 
-          <span className="text-neutral-600 sm:text-left text-center">
+          <span className="text-neutral-600 text-sm sm:text-left text-center">
             From discovering opportunities to supporting hiring, we make finding
             the right role simpler and personal.
           </span>
