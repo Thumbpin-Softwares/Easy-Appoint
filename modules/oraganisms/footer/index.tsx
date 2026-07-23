@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="flex flex-col sm:items-start items-center gap-6">
             <div className="flex">
               <h1 className="text-cyan-500 text-lg font-semibold">Easy</h1>
-              <h1 className="text-blue-600 text-lg font-semibold">Appoint</h1>
+              <h1 className="text-[#1c5a8a] text-lg font-semibold">Appoint</h1>
             </div>
             <h1 className="sm:text-4xl text-2xl sm:w-xs sm:text-left text-center">Find the right talent faster</h1>
             <Button

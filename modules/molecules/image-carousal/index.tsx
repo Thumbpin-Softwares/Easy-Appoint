@@ -29,19 +29,19 @@ export default function ImageCarousal({
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-        <span className="text-white text-lg tracking-tight">
+        <span className="text-white sm:text-lg text-xs tracking-tight">
           {subtitle}
         </span>
 
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight">
+        <h1 className="mt-2 sm:text-4xl text-sm font-semibold tracking-tight">
           {title}
         </h1>
 
-        <div className="mt-6">
+        <div className="sm:mt-6 mt-2">
           <Button
             name="Learn More"
             link={link}
-            style="text-white hover:bg-blue-600 hover:text-white rounded-lg"
+            style="text-white hover:bg-blue-600 hover:text-white sm:text-inherit text-sm rounded-lg"
           />
         </div>
       </div>

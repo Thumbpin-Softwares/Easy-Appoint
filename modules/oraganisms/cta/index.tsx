@@ -13,22 +13,22 @@ const data = [
         imageLink : "/cta/1.webp"
     },
     {
-        title : "Scalable Staffing Solutions Designed For Modern Businesses",
-        subtitle : "Flexible Support",
+        title : "Improving Internal Structure, Hiring Systems, And Team Performance",
+        subtitle : "Strategic HR",
         link : "",
-        imageLink : "/cta/1.webp"
+        imageLink : "/cta/2.webp"
     },
     {
-        title : "Scalable Staffing Solutions Designed For Modern Businesses",
-        subtitle : "Flexible Support",
+        title : "Helping Companies Attract Stronger Talent Through Employer Branding.",
+        subtitle : "Brand Positioning",
         link : "",
-        imageLink : "/cta/1.webp"
+        imageLink : "/cta/3.webp"
     },
     {
-        title : "Scalable Staffing Solutions Designed For Modern Businesses",
-        subtitle : "Flexible Support",
+        title : "Finding Experienced Leaders For High-Impact And Critical Roles.",
+        subtitle : "Leadership Hiring",
         link : "",
-        imageLink : "/cta/1.webp"
+        imageLink : "/cta/4.webp"
     },
 ];
 
@@ -48,7 +48,7 @@ export default function Cta(){
 
     return(
         <main className="flex flex-col items-center justify-center gap-2 py-24 bg-black">
-            <h1 className="text-white text-4xl text-center sm:w-2xl">Strategic HR services designed to support every stage of your growth.</h1>
+            <h1 className="text-white sm:text-4xl text-2xl px-6 sm:px-0 text-center sm:w-2xl">Strategic HR services designed to support every stage of your growth.</h1>
 
             <div className="relative w-full max-w-5xl h-125 sm:h-125 overflow-hidden pt-18">
                 {data.map((item, index) => {
