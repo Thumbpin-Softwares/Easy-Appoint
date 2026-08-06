@@ -8,7 +8,7 @@ import Cta from "@/modules/oraganisms/cta";
 
 export default function home(){
   return(
-    <main className="bg-neutral-100">
+    <main className="bg-white">
       <div>
         <Navbar />
       </div>
