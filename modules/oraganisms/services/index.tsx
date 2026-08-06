@@ -3,6 +3,7 @@ import { BsBagCheck } from "react-icons/bs";
 import { FaGlobeAsia } from "react-icons/fa";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import Sectors from "@/modules/molecules/sectors";
+import { Asterisk } from "lucide-react";
 
 const data = [
   {
@@ -33,9 +34,9 @@ const data = [
 
 export default function Services() {
   return (
-    <main className="py-18 border-t border-neutral-300 flex flex-col gap-2">
-      <span className="sm:text-lg text-center sm:text-left text-md text-blue-600 tracking-tight">What We Do</span>
-      <h1 className="sm:text-4xl text-center sm:text-left text-2xl sm:w-xl tracking-tight">
+    <main className="py-18 bg-[#1b4a42] flex flex-col gap-4">
+      <span className="text-center flex items-center justify-center gap-2 text-xl text-[#abf007]"><Asterisk />What We Help With</span>
+      <h1 className="sm:text-6xl text-white text-center text-6xl font-semibold">
         Recruitment, simplified and optimized by EasyAppoint
       </h1>
       <p className="sm:text-lg text-center sm:text-left text-sm text-neutral-600 sm:w-xl tracking-tight">

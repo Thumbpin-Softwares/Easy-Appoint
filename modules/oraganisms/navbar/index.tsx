@@ -52,7 +52,7 @@ export default function Navbar() {
             <Button
               name="Contact Us"
               link="/contact"
-              style="bg-black px-6 text-white hover:bg-white hover:text-black rounded-full border border-black"
+              style="px-6 bg-[#abf007] text-black duration-300 rounded-full border border-black"
             />
           </div>
 
@@ -147,7 +147,7 @@ export default function Navbar() {
                   <Button
                     name="Contact Us"
                     link="/contact"
-                    style="w-full justify-center rounded-full border border-black bg-black text-white hover:bg-white hover:text-black"
+                    style="w-full justify-center rounded-full border border-black bg-[#abf007] text-black hover:scale-110 duration-300"
                   />
                 </motion.div>
               </div>

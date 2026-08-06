@@ -19,14 +19,14 @@ export default function home(){
       <div className="bg-white">
         <About />
       </div>
-      <div className="bg-white sm:px-18 px-4">
+      <div>
+        <Cta />
+      </div>
+      <div className="">
         <Services />
       </div>
       <div className="bg-white sm:px-18 px-4">
         <Feature />
-      </div>
-      <div>
-        <Cta />
       </div>
 
       <div>

@@ -1,100 +1,77 @@
-import Button from "@/modules/atoms/button";
+"use client";
+
+import { Asterisk } from "lucide-react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 export default function About() {
+  const barsRef = useRef<HTMLDivElement>(null);
+
+  // 0 when the bars enter the viewport, 1 once they sit in the middle of it.
+  const { scrollYProgress } = useScroll({
+    target: barsRef,
+    offset: ["start end", "center center"],
+  });
+
+  // Each bar draws itself over a slightly later slice of the scroll — a stagger
+  // that plays forward on the way down and rewinds on the way back up.
+  const bar1 = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
+  const bar2 = useTransform(scrollYProgress, [0.15, 0.8], [0, 1]);
+  const bar3 = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
+
   return (
-    <>
-      {/* Desktop */}
-      <main className="hidden lg:flex items-center justify-between p-14">
-        <div className="w-xl h-[58vh] flex flex-col items-start justify-between">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-4xl tracking-tight">
-              No more searching. We match IT, AI, Marketing and E-Learning
-              talent to your projects full-time, remote, or freelance.
-            </h1>
-
-            <span className="text-lg tracking-tight text-neutral-600">
-              From discovering opportunities to supporting hiring, we make
-              finding the right role simpler and personal.
-            </span>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <span className="tracking-tight text-md w-sm">
-              We simplify and speed up finding the right person, supporting every
-              step of your hiring journey.
-            </span>
-
-            <Button
-              style="bg-blue-500 text-white w-fit hover:bg-white hover:text-blue-500 rounded-lg border border-blue-500 text-lg tracking-tight"
-              name="Read More About Us"
-              link=""
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center w-md">
-          <div className="border-b border-neutral-600 pb-12">
-            <h1 className="text-blue-500 leading-28 text-[120px]">12K+</h1>
-            <p className="text-neutral-600">
-              People connected with new opportunities
-            </p>
-          </div>
-
-          <div className="pt-12">
-            <h1 className="text-blue-500 text-[120px] leading-28">850+</h1>
-            <span className="text-neutral-600">
-              Companies Hiring Through EasyAppoint
-            </span>
-          </div>
-        </div>
-      </main>
-
-      {/* Mobile */}
-      <main className="flex lg:hidden flex-col px-6 py-10 gap-10">
-        {/* Heading */}
-        <div className="flex flex-col gap-4">
-          <h1 className="text-2xl sm:text-left text-center tracking-tight">
-            No more searching. We match IT, AI, Marketing and E-Learning talent
-            to your projects full-time, remote, or freelance.
+    <main className="grid grid-cols-2">
+      <div className="border-r border-r-neutral-500">
+        <div className="flex flex-col p-12 gap-4">
+          <span className="text-xl flex gap-2 items-center text-[#224742]">
+            <Asterisk />
+            Why it Matters
+          </span>
+          <h1 className="text-[#224742] text-6xl font-semibold">
+            Bad <span className="bg-[#abf007] px-2">hire</span> costs more than
+            a salary
           </h1>
-
-          <span className="text-neutral-600 text-sm sm:text-left text-center">
-            From discovering opportunities to supporting hiring, we make finding
-            the right role simpler and personal.
-          </span>
         </div>
-
-        {/* Stats */}
-        <div className="flex flex-col items-center text-center">
-          <div className="border-b border-neutral-300 flex flex-col items-center pb-8 w-full">
-            <h1 className="text-blue-500 text-8xl sm:text-7xl font-semibold">12K+</h1>
-            <p className="text-neutral-600 mt-2 w-48">
-              People connected with new opportunities
-            </p>
-          </div>
-
-          <div className="pt-8 flex flex-col items-center">
-            <h1 className="text-blue-500 text-8xl sm:text-7xl font-semibold">850+</h1>
-            <p className="text-neutral-600 mt-2 w-48">
-              Companies Hiring Through EasyAppoint
-            </p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="flex flex-col items-center gap-4">
-          <span className="text-neutral-600 sm:text-md text-sm sm:text-left text-center">
-            We simplify and speed up finding the right person, supporting every
-            step of your hiring journey.
-          </span>
-
-          <Button
-            style="bg-blue-600 text-white w-fit hover:bg-white hover:text-blue-500 rounded-lg border border-blue-500 sm:text-lg text-md tracking-tight"
-            name="Read More About Us"
-            link=""
+        <div ref={barsRef}>
+          <motion.div
+            style={{ scaleX: bar1 }}
+            className="h-24 bg-[#1b4a42] w-sm origin-left"
+          />
+          <motion.div
+            style={{ scaleX: bar2 }}
+            className="h-24 bg-[#1b4a42] w-lg origin-left"
+          />
+          <motion.div
+            style={{ scaleX: bar3 }}
+            className="h-24 bg-[#1b4a42] w-full origin-left"
           />
         </div>
-      </main>
-    </>
+      </div>
+      <div className="pt-12 flex justify-between flex-col">
+        <div className="flex px-12 flex-col gap-4">
+          <p className="text-md text-[#224742] font-semibold">
+            You want someone who not only has the skills, but fits your culture,
+            shares your values, and will grow with you.
+          </p>
+          <p className="text-[#224742]">
+            A wrong hire can cost 2–3× their annual salary in lost time,
+            training, and rehiring
+          </p>
+          <p className="text-[#224742]">
+            Poor culture fit affects your whole team not just the new person
+          </p>
+        </div>
+        <div className="pt-16 h-64 overflow-hidden">
+          <video
+            src="https://res.cloudinary.com/xzz0hewl/video/upload/v1786044924/6a4b6ed4d716521c14e6a9c5_0_Business_Meeting_Interview_1920x1080_mp4_vvhakr.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    </main>
   );
 }
