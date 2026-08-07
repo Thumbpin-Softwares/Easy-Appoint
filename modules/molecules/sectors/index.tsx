@@ -24,26 +24,16 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <main className="flex flex-col lg:flex-row items-center justify-between gap-8 rounded-3xl border border-neutral-200 bg-white p-6 lg:p-8">
-      <div className="text-center lg:text-left">
-        <h1 className="text-lg text-blue-600">Sectors We Serve</h1>
-
-        <span className="mt-2 block text-2xl lg:text-3xl tracking-tight">
-          Deep expertise where it matters
-        </span>
-      </div>
-
-      <div className="flex flex-wrap justify-center lg:justify-end gap-3">
+      <main className="flex flex-wrap justify-center gap-2">
         {sectors.map((sector) => (
           <div
             key={sector.title}
             className="flex items-center gap-2 rounded-full bg-neutral-100 px-4 py-2"
           >
-            <span className="text-lg">{sector.icon}</span>
-            <span className="text-sm font-medium">{sector.title}</span>
+            <span className="text-sm">{sector.icon}</span>
+            <span className="text-xs font-medium">{sector.title}</span>
           </div>
         ))}
-      </div>
-    </main>
+      </main>
   );
 }
