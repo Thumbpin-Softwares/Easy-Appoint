@@ -5,6 +5,7 @@ import Footer from "@/modules/oraganisms/footer";
 import Services from "@/modules/oraganisms/services";
 import Feature from "@/modules/oraganisms/feature";
 import Cta from "@/modules/oraganisms/cta";
+import Usp from "@/modules/oraganisms/usp";
 
 export default function home(){
   return(
@@ -27,6 +28,9 @@ export default function home(){
       </div>
       <div className="bg-white sm:px-18 px-4">
         <Feature />
+      </div>
+      <div>
+        <Usp />
       </div>
 
       <div>
