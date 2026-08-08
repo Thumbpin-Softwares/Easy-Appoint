@@ -1,30 +1,52 @@
-import Badge from "@/modules/atoms/badge";
-import { ReactNode } from "react";
+import Image from "next/image";
 
 type StepCardProps = {
+  step: string;
   title: string;
   description: string;
-  component: ReactNode;
-  count: string;
+  image: {
+    src: string;
+    alt?: string;
+    width: number;
+    height: number;
+  };
   className?: string;
 };
 
 export default function StepCard({
+  step,
   title,
   description,
-  component,
-  count,
+  image,
   className = "",
 }: StepCardProps) {
   return (
-    <main className={`border flex flex-col gap-6 justify-between p-4 rounded-3xl ${className}`}>
-      <div className="flex flex-col gap-2">
-        <Badge className="bg-blue-600 w-fit text-xs font-semibold rounded-full text-white " title={count} />
-        <span className="tracking-tight">{title}</span>
-      </div>
-      <div>{component}</div>
-      <div>
-        <p className="text-sm text-neutral-600 tracking-tight">{description}</p>
+    <main className={className}>
+      <div className="relative h-107.5 overflow-hidden">
+        <Image
+    src={image.src}
+    width={image.width}
+    height={image.height}
+    alt={image.alt ?? "Feature Image"}
+    className="h-full w-full object-cover"
+  />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 flex items-end justify-center p-6">
+          <div className="max-w-sm bg-white p-6">
+            <div className="mb-6 text-2xl font-semibold uppercase text-[#9eb1ac]">
+              {step}
+            </div>
+
+            <h3 className="text-4xl font-semibold text-[#1b4a42]">
+              {title}
+            </h3>
+
+            <p className="mt-2 text-md text-[#1b4a42]">
+              {description}
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );
