@@ -7,6 +7,7 @@ import Feature from "@/modules/oraganisms/feature";
 import Cta from "@/modules/oraganisms/cta";
 import Usp from "@/modules/oraganisms/usp";
 import Reviews from "@/modules/oraganisms/reviews";
+import Booking from "@/modules/oraganisms/booking";
 
 export default function home(){
   return(
@@ -35,6 +36,9 @@ export default function home(){
       </div>
       <div>
         <Reviews />
+      </div>
+      <div>
+        <Booking />
       </div>
 
       <div>
