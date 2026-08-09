@@ -15,9 +15,9 @@ function Strip() {
     return (
         <>
             {data.map((item) => (
-                <div key={item} className="flex shrink-0 bg-[#abf007] py-4 items-center">
-                    <span className="text-lg text-black whitespace-nowrap">{item}</span>
-                    <span className="mx-6 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
+                <div key={item} className="flex shrink-0 bg-[#abf007] py-3 sm:py-4 items-center">
+                    <span className="text-sm sm:text-lg text-black whitespace-nowrap">{item}</span>
+                    <span className="mx-4 sm:mx-6 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
                 </div>
             ))}
         </>
@@ -26,7 +26,7 @@ function Strip() {
 
 export default function Booking(){
     return(
-        <main className="bg-[#1b4a42] border-b border-b-neutral-500 pb-32 flex flex-col items-center justify-center">
+        <main className="bg-[#1b4a42] border-b border-b-neutral-500 pb-16 sm:pb-32 flex flex-col items-center justify-center">
             <div className="w-full overflow-hidden">
                 <motion.div
                     className="flex w-max items-center"
@@ -38,7 +38,9 @@ export default function Booking(){
                     ))}
                 </motion.div>
             </div>
-            <h1 className="text-[180px] pt-32 text-white text-center">Book A Call</h1>
+            {/* Scales with the viewport on phones so it keeps the oversized
+                look instead of shrinking to a normal heading */}
+            <h1 className="text-[17vw] sm:text-[180px] leading-none pt-16 sm:pt-32 pb-8 sm:pb-0 text-white text-center whitespace-nowrap">Book A Call</h1>
             <Button style="bg-[#abf007] rounded-full" name="Book Now" link="/" />
         </main>
     );

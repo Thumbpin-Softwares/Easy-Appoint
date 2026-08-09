@@ -58,7 +58,7 @@ function Track() {
       {reviews.map((review) => (
         <div
           key={review.name}
-          className={`${review.card} p-6 w-sm shrink-0 space-y-6 mr-6`}
+          className={`${review.card} p-6 w-[80vw] sm:w-sm shrink-0 space-y-4 sm:space-y-6 mr-4 sm:mr-6`}
         >
           <div className="flex gap-2">
             {[...Array(5)].map((_, i) => (
@@ -70,15 +70,15 @@ function Track() {
               />
             ))}
           </div>
-          <h1 className={`${review.heading} text-2xl font-semibold`}>
+          <h1 className={`${review.heading} text-xl sm:text-2xl font-semibold`}>
             {review.quote}
           </h1>
-          <p className={`${review.text} text-md`}>{review.body}</p>
+          <p className={`${review.text} text-sm sm:text-md`}>{review.body}</p>
           <div
-            className={`pt-6 border-t flex items-center justify-between ${review.border}`}
+            className={`pt-4 sm:pt-6 border-t flex items-center justify-between gap-2 ${review.border}`}
           >
-            <span className={review.text}>{review.name}</span>
-            <span className={`flex ${review.text} items-center gap-2`}>
+            <span className={`${review.text} text-sm sm:text-base`}>{review.name}</span>
+            <span className={`flex ${review.text} text-sm sm:text-base items-center gap-2 shrink-0`}>
               <Verified
                 fill={review.verified.fill}
                 stroke={review.verified.stroke}
@@ -109,18 +109,19 @@ export default function Reviews() {
 
   return (
     <main className="pb-18">
-      <div className="flex items-start">
-        <div className="flex min-w-0 flex-1 flex-col gap-6 items-start py-24 pl-8">
-          <span className="text-[#1b4a42] text-xl flex items-center gap-2">
+      <div className="flex flex-col lg:flex-row items-start">
+        <div className="flex min-w-0 flex-1 flex-col gap-4 sm:gap-6 items-start py-12 lg:py-24 px-6 lg:pr-0 lg:pl-8">
+          <span className="text-[#1b4a42] text-lg sm:text-xl flex items-center gap-2">
             <Asterisk />
             Real results, real people
           </span>
-          <h1 className="text-6xl font-semibold text-[#1b4a42]">Hear it form the <span className="bg-[#abf007] px-2">Business</span> We Helped</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#1b4a42]">Hear it form the <span className="bg-[#abf007] px-2">Business</span> We Helped</h1>
         </div>
-        {/* The About staircase, flipped: widest on top, narrowest at the bottom */}
+        {/* The About staircase, flipped: widest on top, narrowest at the bottom.
+            Hidden below lg — it needs 42rem of width to keep its steps. */}
         {/* shrink-0: if this box narrows past w-lg, w-full would come out
             shorter than the bar below it and the steps would invert. */}
-        <div className="w-2xl shrink-0" ref={barsRef}>
+        <div className="hidden lg:block w-2xl shrink-0" ref={barsRef}>
           <motion.div
             style={{ scaleX: bar1 }}
             className="h-24 bg-[#1b4a42] ml-auto w-full origin-right"
@@ -136,7 +137,7 @@ export default function Reviews() {
         </div>
       </div>
 
-      <div className="overflow-hidden px-6 pb-24">
+      <div className="overflow-hidden px-4 sm:px-6 pb-12 sm:pb-24">
         <motion.div
           className="flex w-max items-stretch"
           animate={{ x: ["0%", "-50%"] }}
@@ -149,18 +150,19 @@ export default function Reviews() {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-3 border-t border-t-neutral-300 items-center pt-24 pb-12 justify-center">
-        <div className="flex flex-col gap-4 items-center border-r border-r-neutral-300 justify-center">
-            <h1 className="text-[#1b4a42] text-8xl">100%</h1>
-            <span className="text-[#1b4a42] text-lg">of clients recommend us.</span>
+      {/* Stacked on phones — three columns of eight-figure numbers don't fit */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-t-neutral-300 items-center pt-12 sm:pt-24 pb-12 justify-center">
+        <div className="flex flex-col gap-2 sm:gap-4 items-center justify-center py-8 sm:py-0 sm:border-r sm:border-r-neutral-300">
+            <h1 className="text-[#1b4a42] text-6xl sm:text-8xl">100%</h1>
+            <span className="text-[#1b4a42] text-base sm:text-lg text-center">of clients recommend us.</span>
         </div>
-        <div className="flex flex-col gap-4 items-center justify-center">
-            <h1 className="text-[#1b4a42] text-8xl">1500</h1>
-            <span className="text-[#1b4a42] text-lg">employees successfully placed.</span>
+        <div className="flex flex-col gap-2 sm:gap-4 items-center justify-center py-8 sm:py-0">
+            <h1 className="text-[#1b4a42] text-6xl sm:text-8xl">1500</h1>
+            <span className="text-[#1b4a42] text-base sm:text-lg text-center">employees successfully placed.</span>
         </div>
-        <div className="flex flex-col gap-4 border-l border-l-neutral-300 items-center justify-center">
-            <h1 className="text-[#1b4a42] text-8xl">38%</h1>
-            <span className="text-[#1b4a42] text-lg">of new clients come via referral</span>
+        <div className="flex flex-col gap-2 sm:gap-4 items-center justify-center py-8 sm:py-0 sm:border-l sm:border-l-neutral-300">
+            <h1 className="text-[#1b4a42] text-6xl sm:text-8xl">38%</h1>
+            <span className="text-[#1b4a42] text-base sm:text-lg text-center">of new clients come via referral</span>
         </div>
       </div>
     </main>
