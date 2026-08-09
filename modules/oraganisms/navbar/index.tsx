@@ -92,7 +92,9 @@ export default function Navbar() {
                 damping: 30,
                 mass: 0.8,
               }}
-              className="fixed left-0 top-0 z-60 flex h-screen w-85 max-w-[88vw] flex-col border-r border-neutral-200 bg-white shadow-2xl"
+              // h-dvh, not h-screen: 100vh on mobile includes the space behind
+              // the browser chrome / home bar, so the CTA fell underneath it.
+              className="fixed left-0 top-0 z-60 flex h-dvh w-85 max-w-[88vw] flex-col border-r border-neutral-200 bg-white shadow-2xl"
             >
               {/* Header */}
               <div className="flex items-center justify-between border-b border-neutral-200 p-6">
@@ -116,7 +118,7 @@ export default function Navbar() {
               </div>
 
               {/* Navigation */}
-              <div className="flex flex-1 flex-col px-6 py-8">
+              <div className="flex flex-1 flex-col overflow-y-auto px-6 pt-8 pb-[calc(2rem+env(safe-area-inset-bottom))]">
                 {navlinks.map((item, index) => (
                   <motion.div
                     key={item.title}

@@ -14,7 +14,7 @@ export default function Hero(){
             </h1>
             <p className="text-base sm:text-lg lg:text-xl w-full max-w-2xl text-center text-neutral-600 pb-6 sm:pb-12">
                 <FlipText
-                    text="Recruitment and staffing agencies operate as the intermediaries their all networks, expertise, and resources to streamline the hiring process."
+                    text="Recruitment and staffing across IT, AI, Marketing and E-Learning whether full-time, remote, or freelance with end-to-end delivery."
                     duration={1}
                     stagger={0.004}
                     spins={1}
