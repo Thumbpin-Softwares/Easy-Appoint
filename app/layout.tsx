@@ -20,8 +20,9 @@ const description =
   "A specialist recruitment partner for teams building in IT, AI, Marketing and E-Learning.";
 
 export const metadata: Metadata = {
-  // Social crawlers need absolute urls — this is what /og/default.png resolves against.
-  metadataBase: new URL("https://easy-appoint.in"),
+  // Social crawlers need absolute urls — this is what /og/default.png resolves
+  // against. Point it at the custom domain once one is attached.
+  metadataBase: new URL("https://easy-appoint.vercel.app"),
   title,
   description,
   icons: {
