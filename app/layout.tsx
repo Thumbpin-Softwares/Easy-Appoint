@@ -15,9 +15,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Easy Appoint | Recruitment for IT, AI, Marketing and E-Learning";
+const description =
+  "A specialist recruitment partner for teams building in IT, AI, Marketing and E-Learning.";
+
 export const metadata: Metadata = {
-  title: "Easy Appoint | Recruitment for IT, AI, Marketing and E-Learning",
-  description: "",
+  // Social crawlers need absolute urls — this is what /og/default.png resolves against.
+  metadataBase: new URL("https://easy-appoint.in"),
+  title,
+  description,
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Easy Appoint",
+    type: "website",
+    images: [
+      {
+        url: "/og/default.png",
+        width: 2880,
+        height: 1482,
+        alt: "Easy Appoint — modern recruitment and staffing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og/default.png"],
+  },
 };
 
 export default function RootLayout({
