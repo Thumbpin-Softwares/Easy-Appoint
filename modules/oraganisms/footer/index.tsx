@@ -1,10 +1,10 @@
 export default function Footer(){
   return(
-    <main className="bg-[#1b4a42]">
+    <main className="bg-[#1b3a52]">
       <div className="grid grid-cols-1 sm:grid-cols-2">
         <div className="flex items-start p-6 sm:p-12 border-b border-b-neutral-500 sm:border-r sm:border-r-neutral-500 justify-between gap-6 sm:gap-12">
           <div className="w-full sm:w-sm space-y-4">
-            <h1 className="text-[#abf007] font-semibold uppercase">Services</h1>
+            <h1 className="text-[#00C2FF] font-semibold uppercase">Services</h1>
             <ul className="text-white text-sm sm:text-base space-y-2">
               <li>Full-time on your payroll</li>
               <li>Remote on third-party payroll</li>
@@ -12,7 +12,7 @@ export default function Footer(){
             </ul>
           </div>
           <div className="w-full sm:w-sm space-y-4">
-            <h1 className="text-[#abf007] font-semibold uppercase">Company</h1>
+            <h1 className="text-[#00C2FF] font-semibold uppercase">Company</h1>
             <ul className="text-white text-sm sm:text-base space-y-2">
               <li>About us</li>
               <li>Team</li>
@@ -22,13 +22,13 @@ export default function Footer(){
         </div>
         <div className="flex items-start p-6 sm:p-12 border-b border-b-neutral-500 sm:border-l sm:border-l-neutral-500 justify-between gap-6 sm:gap-12">
           <div className="w-full sm:w-sm space-y-4">
-            <h1 className="text-[#abf007] font-semibold uppercase">Location</h1>
+            <h1 className="text-[#00C2FF] font-semibold uppercase">Location</h1>
             <span className="text-white text-sm">
               6th Floor, office no. 657, Tower B1, Spaze I-Tech Park, Sector 49, Gurugram, Haryana 122018
             </span>
           </div>
           <div className="w-full sm:w-sm space-y-4">
-            <h1 className="text-[#abf007] font-semibold uppercase">Contact</h1>
+            <h1 className="text-[#00C2FF] font-semibold uppercase">Contact</h1>
             <span className="text-white text-sm sm:text-base break-all">
               contact@easy-appoint.in
             </span>

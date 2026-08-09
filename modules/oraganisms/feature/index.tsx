@@ -121,17 +121,17 @@ export default function Feature() {
     <main className="hidden lg:grid grid-cols-2 items-start pt-12">
       {/* Left Side — pinned while the cards scroll past */}
       <div className="sticky top-24 flex flex-col items-center gap-6 self-start sm:items-start">
-        <span className="flex items-center gap-2 text-xl text-[#1b4a42]">
+        <span className="flex items-center gap-2 text-xl text-[#1b3a52]">
           <Asterisk />
           How It Works
         </span>
 
-        <h1 className="text-6xl font-semibold text-[#1b4a42]">
+        <h1 className="text-6xl font-semibold text-[#1b3a52]">
           Simple, personal Done{" "}
-          <span className="bg-[#abf007] px-2">properly</span>
+          <span className="bg-[#00C2FF] px-2">properly</span>
         </h1>
 
-        <p className="text-lg text-[#1b4a42]">
+        <p className="text-lg text-[#1b3a52]">
           A specialist recruitment partner for teams building in IT, AI,
           Marketing and E-Learning.
         </p>
@@ -147,7 +147,7 @@ export default function Feature() {
                 <motion.div
                   layoutId="feature-step-highlight"
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-0 bg-[#abf007]"
+                  className="absolute inset-0 bg-[#00C2FF]"
                 />
               )}
 
@@ -191,14 +191,14 @@ export default function Feature() {
     {/* ——— Mobile: heading, steps, and cards you drag sideways ——— */}
     <section className="lg:hidden flex flex-col gap-6 py-12">
       <div className="flex flex-col gap-4 px-4">
-        <span className="flex items-center gap-2 text-lg text-[#1b4a42]">
+        <span className="flex items-center gap-2 text-lg text-[#1b3a52]">
           <Asterisk />
           How It Works
         </span>
 
-        <h1 className="text-3xl font-semibold text-[#1b4a42]">
+        <h1 className="text-3xl font-semibold text-[#1b3a52]">
           Simple, personal Done{" "}
-          <span className="bg-[#abf007] px-2">properly</span>
+          <span className="bg-[#00C2FF] px-2">properly</span>
         </h1>
       </div>
 
@@ -215,7 +215,7 @@ export default function Feature() {
               <motion.div
                 layoutId="feature-step-highlight-mobile"
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute inset-0 bg-[#abf007]"
+                className="absolute inset-0 bg-[#00C2FF]"
               />
             )}
             <span

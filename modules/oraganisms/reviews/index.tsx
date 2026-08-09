@@ -10,11 +10,11 @@ const reviews = [
     body: "EasyAppoint understood our culture immediately and only sent us candidates worth meeting.",
     name: "Nikhil Rajput",
     card: "bg-neutral-100",
-    heading: "text-[#1b4a42]",
+    heading: "text-[#1b3a52]",
     text: "text-black",
     border: "border-t-black",
-    star: { fill: "#1b4a42", stroke: "#1b4a42" },
-    verified: { fill: "#1b4a42", stroke: "white" },
+    star: { fill: "#1b3a52", stroke: "#1b3a52" },
+    verified: { fill: "#1b3a52", stroke: "white" },
   },
   {
     quote: "“Genuinely felt supported.”",
@@ -23,7 +23,7 @@ const reviews = [
     card: "bg-black",
     heading: "text-white",
     text: "text-white",
-    border: "border-t-[#1b4a42]",
+    border: "border-t-[#1b3a52]",
     star: { fill: "white", stroke: "white" },
     verified: { fill: "white", stroke: "black" },
   },
@@ -31,23 +31,23 @@ const reviews = [
     quote: "“Found the perfect hire.”",
     body: "EasyAppoint made the whole process feel effortless. We had the right person in the role within three weeks.",
     name: "Sudhanshu Aggarwal",
-    card: "bg-[#abf007]",
-    heading: "text-[#1b4a42]",
+    card: "bg-[#00C2FF]",
+    heading: "text-[#1b3a52]",
     text: "text-black",
     border: "border-t-black",
-    star: { fill: "#1b4a42", stroke: "#1b4a42" },
-    verified: { fill: "#1b4a42", stroke: "#abf007" },
+    star: { fill: "#1b3a52", stroke: "#1b3a52" },
+    verified: { fill: "#1b3a52", stroke: "#00C2FF" },
   },
   {
     quote: "“Hiring stopped being a gamble.”",
     body: "Every shortlist came back sharper than the last. We filled two senior roles without a single wasted interview.",
     name: "Shivangi Joshi",
-    card: "bg-[#1b4a42]",
+    card: "bg-[#1b3a52]",
     heading: "text-white",
     text: "text-white",
     border: "border-t-black",
     star: { fill: "white", stroke: "white" },
-    verified: { fill: "white", stroke: "#1b4a42" },
+    verified: { fill: "white", stroke: "#1b3a52" },
   },
 ];
 
@@ -111,11 +111,11 @@ export default function Reviews() {
     <main className="pb-18">
       <div className="flex flex-col lg:flex-row items-start">
         <div className="flex min-w-0 flex-1 flex-col gap-4 sm:gap-6 items-start py-12 lg:py-24 px-6 lg:pr-0 lg:pl-8">
-          <span className="text-[#1b4a42] text-lg sm:text-xl flex items-center gap-2">
+          <span className="text-[#1b3a52] text-lg sm:text-xl flex items-center gap-2">
             <Asterisk />
             Real results, real people
           </span>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#1b4a42]">Hear it form the <span className="bg-[#abf007] px-2">Business</span> We Helped</h1>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#1b3a52]">Hear it form the <span className="bg-[#00C2FF] px-2">Business</span> We Helped</h1>
         </div>
         {/* The About staircase, flipped: widest on top, narrowest at the bottom.
             Hidden below lg — it needs 42rem of width to keep its steps. */}
@@ -124,15 +124,15 @@ export default function Reviews() {
         <div className="hidden lg:block w-2xl shrink-0" ref={barsRef}>
           <motion.div
             style={{ scaleX: bar1 }}
-            className="h-24 bg-[#1b4a42] ml-auto w-full origin-right"
+            className="h-24 bg-[#1b3a52] ml-auto w-full origin-right"
           />
           <motion.div
             style={{ scaleX: bar2 }}
-            className="h-24 bg-[#1b4a42] ml-auto w-lg origin-right"
+            className="h-24 bg-[#1b3a52] ml-auto w-lg origin-right"
           />
           <motion.div
             style={{ scaleX: bar3 }}
-            className="h-24 bg-[#1b4a42] ml-auto w-sm origin-right"
+            className="h-24 bg-[#1b3a52] ml-auto w-sm origin-right"
           />
         </div>
       </div>
@@ -153,16 +153,16 @@ export default function Reviews() {
       {/* Stacked on phones — three columns of eight-figure numbers don't fit */}
       <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-t-neutral-300 items-center pt-12 sm:pt-24 pb-12 justify-center">
         <div className="flex flex-col gap-2 sm:gap-4 items-center justify-center py-8 sm:py-0 sm:border-r sm:border-r-neutral-300">
-            <h1 className="text-[#1b4a42] text-6xl sm:text-8xl">100%</h1>
-            <span className="text-[#1b4a42] text-base sm:text-lg text-center">of clients recommend us.</span>
+            <h1 className="text-[#1b3a52] text-6xl sm:text-8xl">100%</h1>
+            <span className="text-[#1b3a52] text-base sm:text-lg text-center">of clients recommend us.</span>
         </div>
         <div className="flex flex-col gap-2 sm:gap-4 items-center justify-center py-8 sm:py-0">
-            <h1 className="text-[#1b4a42] text-6xl sm:text-8xl">1500</h1>
-            <span className="text-[#1b4a42] text-base sm:text-lg text-center">employees successfully placed.</span>
+            <h1 className="text-[#1b3a52] text-6xl sm:text-8xl">1500</h1>
+            <span className="text-[#1b3a52] text-base sm:text-lg text-center">employees successfully placed.</span>
         </div>
         <div className="flex flex-col gap-2 sm:gap-4 items-center justify-center py-8 sm:py-0 sm:border-l sm:border-l-neutral-300">
-            <h1 className="text-[#1b4a42] text-6xl sm:text-8xl">38%</h1>
-            <span className="text-[#1b4a42] text-base sm:text-lg text-center">of new clients come via referral</span>
+            <h1 className="text-[#1b3a52] text-6xl sm:text-8xl">38%</h1>
+            <span className="text-[#1b3a52] text-base sm:text-lg text-center">of new clients come via referral</span>
         </div>
       </div>
     </main>

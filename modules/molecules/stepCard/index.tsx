@@ -34,15 +34,15 @@ export default function StepCard({
         {/* Overlay */}
         <div className="absolute inset-0 flex items-end justify-center p-6">
           <div className="max-w-sm bg-white p-6">
-            <div className="mb-6 text-2xl font-semibold uppercase text-[#9eb1ac]">
+            <div className="mb-6 text-2xl font-semibold uppercase text-[#9eabb1]">
               {step}
             </div>
 
-            <h3 className="text-4xl font-semibold text-[#1b4a42]">
+            <h3 className="text-4xl font-semibold text-[#1b3a52]">
               {title}
             </h3>
 
-            <p className="mt-2 text-md text-[#1b4a42]">
+            <p className="mt-2 text-md text-[#1b3a52]">
               {description}
             </p>
           </div>

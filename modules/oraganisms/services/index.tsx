@@ -24,7 +24,7 @@ function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div
-      className={`group relative ${background} hover:bg-[#abf007] duration-300 flex flex-col gap-8 lg:gap-0 justify-between p-4 sm:p-6`}
+      className={`group relative ${background} hover:bg-[#00C2FF] duration-300 flex flex-col gap-8 lg:gap-0 justify-between p-4 sm:p-6`}
     >
       <div className="pointer-events-none absolute right-6 top-6 z-10 translate-y-2 opacity-0 duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
         {slot}
@@ -45,14 +45,14 @@ function ServiceCard({
 
 export default function Services() {
   return (
-    <main className="py-18 bg-[#1b4a42] flex flex-col items-center justify-center gap-4">
-      <span className="text-center flex items-center justify-center gap-2 text-lg sm:text-xl text-[#abf007]">
+    <main className="py-18 bg-[#1b3a52] flex flex-col items-center justify-center gap-4">
+      <span className="text-center flex items-center justify-center gap-2 text-lg sm:text-xl text-[#00C2FF]">
         <Asterisk />
         What We Help With
       </span>
       <h1 className="px-4 w-full max-w-4xl text-white text-center text-3xl sm:text-5xl lg:text-6xl font-semibold">
         Recruitment, simplified and optimized by{" "}
-        <span className="text-[#1b4a42] px-2 bg-[#abf007]">EasyAppoint</span>
+        <span className="text-[#1b3a52] px-2 bg-[#00C2FF]">EasyAppoint</span>
       </h1>
 
       {/* Phone: image on top, the four-cell grid underneath — unchanged 2x2 */}
@@ -66,7 +66,7 @@ export default function Services() {
         />
         <div className="grid grid-cols-2">
           <div className="bg-white px-6 py-8 lg:py-0 flex flex-col items-center gap-2 justify-center">
-            <span className="text-[#1b4a42] text-md flex items-center gap-2"><Asterisk />Sectors We Serve</span>
+            <span className="text-[#1b3a52] text-md flex items-center gap-2"><Asterisk />Sectors We Serve</span>
             <h1 className="text-2xl text-center">Deep expertise where it matters</h1>
             <Sectors />
           </div>

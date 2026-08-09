@@ -23,12 +23,12 @@ export default function About() {
     <main className="grid grid-cols-1 lg:grid-cols-2">
       <div className="lg:border-r lg:border-r-neutral-500">
         <div className="flex flex-col p-6 lg:p-12 gap-4">
-          <span className="text-lg lg:text-xl flex gap-2 items-center text-[#224742]">
+          <span className="text-lg lg:text-xl flex gap-2 items-center text-[#1b3a52]">
             <Asterisk />
             Why it Matters
           </span>
-          <h1 className="text-[#224742] text-3xl sm:text-5xl lg:text-6xl font-semibold">
-            Bad <span className="bg-[#abf007] px-2">hire</span> costs more than
+          <h1 className="text-[#1b3a52] text-3xl sm:text-5xl lg:text-6xl font-semibold">
+            Bad <span className="bg-[#00C2FF] px-2">hire</span> costs more than
             a salary
           </h1>
         </div>
@@ -36,30 +36,30 @@ export default function About() {
         <div className="hidden lg:block" ref={barsRef}>
           <motion.div
             style={{ scaleX: bar1 }}
-            className="h-24 bg-[#1b4a42] w-sm origin-left"
+            className="h-24 bg-[#1b3a52] w-sm origin-left"
           />
           <motion.div
             style={{ scaleX: bar2 }}
-            className="h-24 bg-[#1b4a42] w-lg origin-left"
+            className="h-24 bg-[#1b3a52] w-lg origin-left"
           />
           <motion.div
             style={{ scaleX: bar3 }}
-            className="h-24 bg-[#1b4a42] w-full origin-left"
+            className="h-24 bg-[#1b3a52] w-full origin-left"
           />
         </div>
       </div>
       <div className="pt-0 lg:pt-12 flex justify-between flex-col">
         {/* Supporting copy is desktop-only; on a phone the video follows the heading */}
         <div className="hidden lg:flex px-12 flex-col gap-4">
-          <p className="text-md text-[#224742] font-semibold">
+          <p className="text-md text-[#1b3a52] font-semibold">
             You want someone who not only has the skills, but fits your culture,
             shares your values, and will grow with you.
           </p>
-          <p className="text-[#224742]">
+          <p className="text-[#1b3a52]">
             A wrong hire can cost 2–3× their annual salary in lost time,
             training, and rehiring
           </p>
-          <p className="text-[#224742]">
+          <p className="text-[#1b3a52]">
             Poor culture fit affects your whole team not just the new person
           </p>
         </div>

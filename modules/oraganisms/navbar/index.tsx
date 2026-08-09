@@ -52,7 +52,7 @@ export default function Navbar() {
             <Button
               name="Contact Us"
               link="/contact"
-              style="px-6 bg-[#abf007] text-black duration-300 rounded-full border border-black"
+              style="px-6 bg-[#00C2FF] text-black duration-300 rounded-full border border-black"
             />
           </div>
 
@@ -61,7 +61,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}
             whileHover={{ rotate: 5 }}
             onClick={() => setOpen(true)}
-            className="lg:hidden rounded-lg p-2 hover:bg-neutral-100 bg-[#abf007]"
+            className="lg:hidden rounded-lg p-2 hover:bg-neutral-100 bg-[#00C2FF]"
           >
             <Menu size={28} />
           </motion.button>
@@ -149,7 +149,7 @@ export default function Navbar() {
                   <Button
                     name="Contact Us"
                     link="/contact"
-                    style="w-fit justify-center rounded-full border border-black bg-[#abf007] text-black hover:scale-110 duration-300"
+                    style="w-fit justify-center rounded-full border border-black bg-[#00C2FF] text-black hover:scale-110 duration-300"
                   />
                 </motion.div>
               </div>
