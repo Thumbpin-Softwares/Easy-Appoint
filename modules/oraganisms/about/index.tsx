@@ -20,19 +20,20 @@ export default function About() {
   const bar3 = useTransform(scrollYProgress, [0.3, 1], [0, 1]);
 
   return (
-    <main className="grid grid-cols-2">
-      <div className="border-r border-r-neutral-500">
-        <div className="flex flex-col p-12 gap-4">
-          <span className="text-xl flex gap-2 items-center text-[#224742]">
+    <main className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="lg:border-r lg:border-r-neutral-500">
+        <div className="flex flex-col p-6 lg:p-12 gap-4">
+          <span className="text-lg lg:text-xl flex gap-2 items-center text-[#224742]">
             <Asterisk />
             Why it Matters
           </span>
-          <h1 className="text-[#224742] text-6xl font-semibold">
+          <h1 className="text-[#224742] text-3xl sm:text-5xl lg:text-6xl font-semibold">
             Bad <span className="bg-[#abf007] px-2">hire</span> costs more than
             a salary
           </h1>
         </div>
-        <div ref={barsRef}>
+        {/* Staircase needs the full column width to keep its steps — desktop only */}
+        <div className="hidden lg:block" ref={barsRef}>
           <motion.div
             style={{ scaleX: bar1 }}
             className="h-24 bg-[#1b4a42] w-sm origin-left"
@@ -47,8 +48,9 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="pt-12 flex justify-between flex-col">
-        <div className="flex px-12 flex-col gap-4">
+      <div className="pt-0 lg:pt-12 flex justify-between flex-col">
+        {/* Supporting copy is desktop-only; on a phone the video follows the heading */}
+        <div className="hidden lg:flex px-12 flex-col gap-4">
           <p className="text-md text-[#224742] font-semibold">
             You want someone who not only has the skills, but fits your culture,
             shares your values, and will grow with you.
@@ -61,7 +63,7 @@ export default function About() {
             Poor culture fit affects your whole team not just the new person
           </p>
         </div>
-        <div className="pt-16 h-64 overflow-hidden">
+        <div className="pt-0 lg:pt-16 h-56 sm:h-64 overflow-hidden">
           <video
             src="https://res.cloudinary.com/xzz0hewl/video/upload/v1786044924/6a4b6ed4d716521c14e6a9c5_0_Business_Meeting_Interview_1920x1080_mp4_vvhakr.mp4"
             autoPlay

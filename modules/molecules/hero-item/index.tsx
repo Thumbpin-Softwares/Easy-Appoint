@@ -47,7 +47,7 @@ export default function HeroItem() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 flex h-114 items-center justify-center">
+      <div className="relative z-10 flex h-auto py-6 lg:py-0 lg:h-114 items-center justify-center">
         {/* Left side */}
         <motion.div
           initial={{ x: "34vw", y: "-50%", opacity: 0 }}
@@ -74,7 +74,12 @@ export default function HeroItem() {
         </motion.div>
 
         {/* Placeholder: holds the video's final size, and hosts it once settled */}
-        <div ref={holderRef} className="relative z-10 h-full w-2xl">
+        {/* Portrait 9:16 crop on phones; the landscape source is cut by
+            object-cover. Desktop keeps the original 672 x 456 slot. */}
+        <div
+          ref={holderRef}
+          className="relative z-10 w-[92vw] aspect-9/16 lg:aspect-auto lg:h-full lg:w-2xl"
+        >
           {settled && (
             <video
               ref={(el) => {

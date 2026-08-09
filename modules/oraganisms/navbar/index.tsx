@@ -61,7 +61,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}
             whileHover={{ rotate: 5 }}
             onClick={() => setOpen(true)}
-            className="lg:hidden rounded-lg p-2 hover:bg-neutral-100"
+            className="lg:hidden rounded-lg p-2 hover:bg-neutral-100 bg-[#abf007]"
           >
             <Menu size={28} />
           </motion.button>
@@ -147,7 +147,7 @@ export default function Navbar() {
                   <Button
                     name="Contact Us"
                     link="/contact"
-                    style="w-full justify-center rounded-full border border-black bg-[#abf007] text-black hover:scale-110 duration-300"
+                    style="w-fit justify-center rounded-full border border-black bg-[#abf007] text-black hover:scale-110 duration-300"
                   />
                 </motion.div>
               </div>

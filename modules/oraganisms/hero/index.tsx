@@ -3,8 +3,8 @@ import FlipText from "@/modules/atoms/flip-text";
 
 export default function Hero(){
     return(
-        <main className="flex py-12 flex-col w-full gap-6 items-center justify-center">
-            <h1 className="text-5xl w-2xl text-center font-semibold">
+        <main className="flex py-8 sm:py-12 px-4 lg:px-0 flex-col w-full gap-4 sm:gap-6 items-center justify-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl w-full max-w-2xl text-center font-semibold">
                 <FlipText
                     text="We Are Modern Recruitment and Staffing Agency"
                     duration={1.2}
@@ -12,7 +12,7 @@ export default function Hero(){
                     spins={2}
                 />
             </h1>
-            <p className="text-xl w-2xl text-center text-neutral-600 pb-12">
+            <p className="text-base sm:text-lg lg:text-xl w-full max-w-2xl text-center text-neutral-600 pb-6 sm:pb-12">
                 <FlipText
                     text="Recruitment and staffing agencies operate as the intermediaries their all networks, expertise, and resources to streamline the hiring process."
                     duration={1}
